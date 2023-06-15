@@ -23,22 +23,6 @@ class AppBarWidget extends StatelessWidget {
       ),
       elevation: 0,
       actions: [
-        Padding(
-          padding: const EdgeInsets.only(right: 50),
-          child: Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CustomTextWidget(
-                  text: 'Verifarma Video Club',
-                ),
-              ),
-              FlutterLogo(
-                size: 30,
-              ),
-            ],
-          ),
-        ),
         IconButton(
           onPressed: () {
             searchProvider.toggleSearchField();

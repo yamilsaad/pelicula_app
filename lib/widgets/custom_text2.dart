@@ -16,9 +16,11 @@ class CustomTextWidget2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: style,
+    return Center(
+      child: Text(
+        text,
+        style: style,
+      ),
     );
   }
 }

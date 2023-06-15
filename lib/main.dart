@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/home',
         routes: {
           '/home': (context) => HomeScreen(),
+          'details': (context) => MoviesScreen(),
         },
         theme: AppThemes.lightTheme,
         darkTheme: AppThemes.darkTheme,
