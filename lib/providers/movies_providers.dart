@@ -12,21 +12,30 @@ class MoviesProvider extends ChangeNotifier {
 
   List<Movie> onDisplayMovies = [];
   List<Movie> popularMovies = [];
+  List<Movie> upCommingMovies = [];
+
+  int _popularPage = 0;
 
   MoviesProvider() {
     print('Movies Provider Inicializado');
 
     this.getOnDisplayMovies();
     this.getPopularMovies();
+    this.getUpComming();
   }
 
-  getOnDisplayMovies() async {
-    var url = Uri.https(_baseUrl, '3/movie/now_playing',
-        {'api_key': _apiKey, 'language': _lenguage, 'page': '1'});
+  Future<String> _getJsonData(String endpoint, [int page = 1]) async {
+    var url = Uri.https(_baseUrl, endpoint,
+        {'api_key': _apiKey, 'language': _lenguage, 'page': '$page'});
 
     // Await the http get response, then decode the json-formatted response.
     final response = await http.get(url);
-    final nowPlayingResponse = Welcome.fromJson(response.body);
+    return response.body;
+  }
+
+  getOnDisplayMovies() async {
+    final jsonData = await this._getJsonData('3/movie/now_playing');
+    final nowPlayingResponse = Welcome.fromJson(jsonData);
 
     onDisplayMovies = nowPlayingResponse.results;
 
@@ -34,14 +43,25 @@ class MoviesProvider extends ChangeNotifier {
   }
 
   getPopularMovies() async {
-    var url = Uri.https(_baseUrl, '3/movie/popular',
+    _popularPage++;
+
+    final jsonData = await this._getJsonData('3/movie/popular', _popularPage);
+    final popularResponse = PopularResponse.fromJson(jsonData);
+
+    popularMovies = [...popularResponse.results, ...popularResponse.results];
+    notifyListeners();
+  }
+
+  getUpComming() async {
+    var url = Uri.https(_baseUrl, '3/movie/upcoming',
         {'api_key': _apiKey, 'language': _lenguage, 'page': '1'});
 
     // Await the http get response, then decode the json-formatted response.
     final response = await http.get(url);
-    final popularResponse = PopularResponse.fromJson(response.body);
+    final upcomming = Up.fromJson(response.body);
 
-    popularMovies = [...popularResponse.results, ...popularResponse.results];
+    upCommingMovies = upcomming.results;
+
     notifyListeners();
   }
 }

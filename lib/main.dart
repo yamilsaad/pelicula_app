@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pelicula_app/providers/movies_providers.dart';
 import 'package:pelicula_app/providers/providers.dart';
 import 'package:provider/provider.dart';
 
@@ -15,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider.value(value: LoginFormProvider()),
         ChangeNotifierProvider(
           create: (_) => MoviesProvider(),
           lazy: false,
@@ -24,9 +24,11 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Video Club',
-        initialRoute: '/home',
+        initialRoute: '/login',
         routes: {
-          '/home': (context) => HomeScreen(),
+          '/login': (context) => const LoginScreen(),
+          //'register': (context) => const RegisterScreen(),
+          'home': (context) => HomeScreen(),
           'details': (context) => MoviesScreen(),
         },
         theme: AppThemes.lightTheme,
