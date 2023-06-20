@@ -225,9 +225,9 @@ class HeaderDrawerWidget extends StatelessWidget {
   }
 
   String profileImagePath =
-      'assets/images/dartvader.jpg'; // Ruta de la imagen de Darth Vader
+      'assets/dartvader.jpg'; // Ruta de la imagen de Darth Vader
   String placeholderImagePath =
-      'assets/images/usuario_image.png'; // Ruta de la imagen de marcador de posición
+      'assets/usuario_image.png'; // Ruta de la imagen de marcador de posición
 
   HeaderDrawerWidget({Key? key}) : super(key: key);
 

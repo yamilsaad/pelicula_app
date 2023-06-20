@@ -40,7 +40,7 @@ class _ProductorasLayoutState extends State<ProductorasLayout> {
                     image: NetworkImage(
                       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv7K-BjtdCX863fkZI7FY50gZcwPmmlNT-ZUUU4r0u7Y5pOIklKONDuvzSMsMPGgqFuyo&usqp=CAU',
                     ),
-                    placeholder: AssetImage('assets/images/usuario_image.png'),
+                    placeholder: AssetImage('assets/usuario_image.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -57,7 +57,7 @@ class _ProductorasLayoutState extends State<ProductorasLayout> {
                     image: NetworkImage(
                       'https://logowik.com/content/uploads/images/paramount-network8623.jpg',
                     ),
-                    placeholder: AssetImage('assets/images/usuario_image.png'),
+                    placeholder: AssetImage('assets/usuario_image.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -74,7 +74,7 @@ class _ProductorasLayoutState extends State<ProductorasLayout> {
                     image: NetworkImage(
                       'https://img-new.cgtrader.com/items/3586206/49f6bf3034/large/netflix-logo-icon-3d-model-obj-3ds-fbx-c4d-stl.jpg',
                     ),
-                    placeholder: AssetImage('assets/images/usuario_image.png'),
+                    placeholder: AssetImage('assets/usuario_image.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -91,7 +91,7 @@ class _ProductorasLayoutState extends State<ProductorasLayout> {
                     image: NetworkImage(
                       'https://thenationonlineng.net/wp-content/uploads/2020/07/Dreamworks-Animation-studio.jpg',
                     ),
-                    placeholder: AssetImage('assets/images/usuario_image.png'),
+                    placeholder: AssetImage('assets/usuario_image.png'),
                     fit: BoxFit.cover,
                   ),
                 ),

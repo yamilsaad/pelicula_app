@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pelicula_app/widgets/card_swiper.dart';
-import 'package:pelicula_app/widgets/other_scroll.dart';
+//import 'package:pelicula_app/widgets/other_scroll.dart';
 import 'package:provider/provider.dart';
 
 import '../layout/layout.dart';
@@ -23,7 +23,7 @@ class HomeScreenContent extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: 0),
         child: Container(
-          height: 2780,
+          height: 2100,
           width: double.infinity,
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -64,12 +64,6 @@ class HomeScreenContent extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              //Peliculas en un Carrusel.
-              CardSwiper(movies: moviesProvider.onDisplayMovies),
-              Divider(height: 5),
-              SizedBox(
-                height: 20,
-              ),
               //Posible botones.
               ProductoraWidget(),
               SizedBox(
@@ -79,6 +73,14 @@ class HomeScreenContent extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
+              //Peliculas en un Carrusel.
+              CardSwiper(movies: moviesProvider.onDisplayMovies),
+              Divider(height: 5),
+              SizedBox(
+                height: 20,
+              ),
+
+              /*
               //Otros scrolls de películas.
               OtherScrolls(
                 movies: moviesProvider.popularMovies,
@@ -94,7 +96,7 @@ class HomeScreenContent extends StatelessWidget {
               Divider(height: 5),
               SizedBox(
                 height: 20,
-              ),
+              ),*/
               //Mi nombre.
               YamilSaad(),
             ],

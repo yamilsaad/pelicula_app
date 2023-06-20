@@ -20,16 +20,16 @@ class ProductoraWidget extends StatefulWidget {
 class _ProductoraWidgetState extends State<ProductoraWidget> {
   final List<Product> products = [
     Product(
-      imageUrl: 'assets/images/action.png',
+      imageUrl: 'assets/action.png',
     ),
     Product(
-      imageUrl: 'assets/images/sexy.png',
+      imageUrl: 'assets/sexy.png',
     ),
     Product(
-      imageUrl: 'assets/images/show.png',
+      imageUrl: 'assets/show.png',
     ),
     Product(
-      imageUrl: 'assets/images/love.png',
+      imageUrl: 'assets/love.png',
     ),
   ];
 
